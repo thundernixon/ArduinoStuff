@@ -67,16 +67,16 @@ void loop() {
   printer.justify('C');
   printer.boldOn();
   printer.setSize('M');        // Set type size, accepts 'S', 'M', 'L'
-  printer.println(F("Type]Media "));
+  printer.println(F("Type]Media"));
 
-  printer.println(F("TypeCooker @ Open Day 2017"));
+  printer.println(F("TypeCooker @ Open Day 2018"));
   printer.boldOff();
   
   printer.justify('L');
 
   printer.println(F(" "));
   printer.setSize('S');
-  int weightValue = random(3);
+  int weightValue = random(4);
   if (weightValue == 0) {
       printer.boldOn();
       printer.println(F("Weight: Light"));
@@ -96,7 +96,13 @@ void loop() {
       printer.println(F("Weight: Bold"));
       printer.boldOff();
       printer.println(F("All strokes are heavy."));    
-   } 
+   }
+  if (weightValue == 3) {
+      printer.boldOn();
+      printer.println(F("Weight: Ultra"));
+      printer.boldOff();
+      printer.println(F("Make it as bold as possible."));    
+   }
 
   printer.println(F(" "));
 
@@ -122,7 +128,7 @@ void loop() {
 
   printer.println(F(" "));
 
-  int strokeValue = random(2);
+  int strokeValue = random(3);
   if (strokeValue == 0){
       printer.boldOn();
       printer.println(F("Stroke Endings: Straight,NoSerif"));
@@ -135,49 +141,130 @@ void loop() {
       printer.boldOff();
       printer.println(F("The strokes end in serifs."));     
     }
+  if (strokeValue == 2){
+      printer.boldOn();
+      printer.println(F("Stroke Endings: Rounded"));
+      printer.boldOff();
+      printer.println(F("The strokes are rounded at \nthe end."));     
+    }
 
 
   printer.println(F(" "));
 
-  int constructionValue = random(2);
-  if (strokeValue == 0){
+  int constructionValue = random(3);
+  if (constructionValue == 0){
       printer.boldOn();
       printer.println(F("Constructions: Roman"));
       printer.boldOff();
-      printer.println(F("Construct the letters as\nlowercase romans."));     
+      printer.println(F("Construct letters as lowercase."));     
     }
-  if (strokeValue == 1){
+  if (constructionValue == 1){
       printer.boldOn();
       printer.println(F("Constructions: Capitals"));
       printer.boldOff();
-      printer.println(F("Construct the letters as\ncapitals."));     
+      printer.println(F("Construct letters as caps."));     
+    }
+  if (constructionValue == 2){
+      printer.boldOn();
+      printer.println(F("Constructions: Italics"));
+      printer.boldOff();
+      printer.println(F("Construct letters as italics."));     
     }
 
   printer.println(F(" "));
 
   int contrastAmountValue = random(2);
-  if (strokeValue == 0){
+  if (contrastAmountValue == 0){
       printer.boldOn();
       printer.println(F("Contrast Amount: Low"));
       printer.boldOff();
       printer.println(F("Thicks are similar to thins."));     
     }
-  if (strokeValue == 1){
+  if (contrastAmountValue == 1){
       printer.boldOn();
       printer.println(F("Contrast Amount: Some"));
       printer.boldOff();
       printer.println(F("Thicks are similar to thins\nbut you can tell the difference."));     
     }
-  if (strokeValue == 2){
+  if (contrastAmountValue == 2){
       printer.boldOn();
       printer.println(F("Contrast Amount: A lot"));
       printer.boldOff();
-      printer.println(F("Thicks are a lot thicker than the thins."));     
+      printer.println(F("Thick thicks; thin thins."));     
     }
     
   printer.println(F(" "));
+    
+  int stemsValue = random(4);
+  if (stemsValue == 0){
+      printer.boldOn();
+      printer.println(F("Stems: Straight"));
+      printer.boldOff();
+      printer.println(F("The stems are perfectly straight."));     
+    }
+  if (stemsValue == 1){
+      printer.boldOn();
+      printer.println(F("Stems: Slightly Concave"));
+      printer.boldOff();
+      printer.println(F("The stems are slightly curved \ninward."));     
+    }
+  if (stemsValue == 2){
+      printer.boldOn();
+      printer.println(F("Stems: Flaring"));
+      printer.boldOff();
+      printer.println(F("The stems are very curved \ninward. Might involve serifs."));     
+    }
+  if (stemsValue == 3){
+      printer.boldOn();
+      printer.println(F("Stems: Convex"));
+      printer.boldOff();
+      printer.println(F("The stems are curved \noutward."));     
+    }
+    
+  printer.println(F(" "));
+  
+  int specialEffectsValue = random(6);
+  if (specialEffectsValue == 0){
+      printer.boldOn();
+      printer.println(F("Special: Only Straight Lines"));
+      printer.boldOff();
+      printer.println(F("Use no curves. Curves are \noverrated."));     
+    }
+  if (specialEffectsValue == 1){
+      printer.boldOn();
+      printer.println(F("Special: Rough Contours"));
+      printer.boldOff();
+      printer.println(F("The contours are rought. \nShould not be difficult. :D"));     
+    }
+  if (specialEffectsValue == 2){
+      printer.boldOn();
+      printer.println(F("Special: Casual"));
+      printer.boldOff();
+      printer.println(F("Displays a casual approach to \nconstruction and finish."));     
+    }
+  if (specialEffectsValue == 3){
+      printer.boldOn();
+      printer.println(F("Special: Stencil"));
+      printer.boldOff();
+      printer.println(F("Connect all counters to the \noutside."));     
+    }
+  if (specialEffectsValue == 4){
+      printer.boldOn();
+      printer.println(F("Special: Inktraps"));
+      printer.boldOff();
+      printer.println(F("Open up sharp white corners. \nPrevent black corner rounding."));     
+    }
+  if (specialEffectsValue == 5){
+      printer.boldOn();
+      printer.println(F("Special: Initial & Final Swashes"));
+      printer.boldOff();
+      printer.println(F("Add unnecessary but pretty \nfrivolities to start & end."));     
+    }
+  
+    
+  printer.println(F(" "));
 
-  printer.println(F("www.typemedia.org"));
+  printer.println(F("new.typemedia.org"));
   printer.println(F(" "));
   printer.println(F(" "));
   printer.println(F(" "));
