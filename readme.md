@@ -42,7 +42,7 @@ That is to say, don’t worry about overwriting what is there. If you need the o
 
 Go to https://create.arduino.cc/, make a login ID, and then go to Arduino Web Editor
 
-![](images/1.png)
+![](readme-images/1.png)
 
 Make sure you’ve linked the board to the browser:
 
@@ -52,7 +52,7 @@ https://create.arduino.cc/projecthub/Arduino_Genuino/getting-started-with-arduin
 Edit it in the Arduino Create web IDE:
 
 
-![](images/2.png)
+![](readme-images/2.png)
 
 
 To update the year, simply change this line (currently line 72):
@@ -64,15 +64,15 @@ To edit or change the recipe, update the text in the `if` statements
 When the Arduino is connected via USB, it’ll show up in the dropdown at top. When you’ve edited the code, just click the right arrow to upload it onto the arduino.
 
 
-![](images/3.png)
+![](readme-images/3.png)
 
 
 You can even test the functions on the arduino while it’s still hooked up to USB, so it’s pretty quick and easy to test.
 
 ## Wiring instructions. Be sure to keep it connected, or it will stop working!
 
-![](images/4.jpeg)
-![](images/5.jpeg)
+![](readme-images/4.jpeg)
+![](readme-images/5.jpeg)
 
 
 Put in another way:
